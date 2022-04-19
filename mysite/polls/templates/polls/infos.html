@@ -1,0 +1,70 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWL Stats</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/infos.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/header.css' %}">
+
+
+
+</head>
+
+<body>
+
+
+
+    <div id = "title">
+
+        <div class="box-1">
+            <form action="stats" method="GET">
+                <button class="btn btn-one backgroundubtton" name = "gameStats" value="global" role="button"> 
+                  <span>GAME STATS</span>
+                </button>        
+            </form>
+        </div>
+        <div class="box-1">
+          <form action="https://legionhq.thefifthtrooper.com/" >
+              <button class="btn btn-one backgroundubtton" name = "gameStats" value="global" role="button"> 
+                <span>ARMY BUILDER</span>
+              </button>        
+          </form>
+        </div>
+        <div class="box-1">
+          <form action="https://discord.gg/RfrtmFCf" >
+              <button class="btn btn-one backgroundubtton" name = 'discord' value="global" role="button"> 
+                <span>DISCORD</span>
+              </button>        
+          </form>
+        </div>
+        <div class="box-1">
+          <form action="infos" method="GET">
+              <button class="btn btn-one backgroundubtton" name = "infos" value="global" role="button"> 
+                <span>INFOS</span>
+              </button>        
+          </form>
+        </div>
+    
+      </div>
+
+
+
+
+<!-- Optional: some overlay text to describe the video -->
+<div class="content">
+    <h1>Heading</h1>
+    <p>Lorem ipsum...</p>
+    <!-- Use a button to pause/play the video with JavaScript -->
+</div>#
+    
+
+</body>
+
+
+
+</html>
