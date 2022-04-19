@@ -7,3 +7,7 @@ body{
 }
 
 
+
+td[data-result-val="L"] { color: red;}
+td[data-result-val="W"] { color: green;}
+td[data-result-val="D"] { color: grey;}
