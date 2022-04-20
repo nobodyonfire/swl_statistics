@@ -22,28 +22,28 @@
 
   <div id = "title">
 
-    <div class="box-1">
+    <div class="noselect box-1">
         <form action="stats" method="GET">
             <button class="btn btn-one backgroundubtton" name = "gameStats" value="global" role="button"> 
               <span>GAME STATS</span>
             </button>        
         </form>
     </div>
-    <div class="box-1">
+    <div class="noselect box-1">
       <form action="https://legionhq.thefifthtrooper.com/" >
           <button class="btn btn-one backgroundubtton" name = "gameStats" value="global" role="button"> 
             <span>ARMY BUILDER</span>
           </button>        
       </form>
     </div>
-    <div class="box-1">
+    <div class="noselect box-1">
       <form action="https://discord.gg/RfrtmFCf" >
           <button class="btn btn-one backgroundubtton" name = 'discord' value="global" role="button"> 
             <span>DISCORD</span>
           </button>        
       </form>
     </div>
-    <div class="box-1">
+    <div class="noselect box-1">
       <form action="infos" method="GET">
           <button class="btn btn-one backgroundubtton" name = "infos" value="global" role="button"> 
             <span>INFOS</span>
@@ -70,9 +70,50 @@
     </label>  
   </div>
 
+
+
+
+<div class="spacetableau"> 
+  <div class = "noselect tableau">
+    <table class="styled-table styled-tablegreen">
+      
+      <thead>
+          <tr >  
+              <th> Meilleurs jets </th>
+              <td>Joueur</td>
+              <td> Att / Def </td>
+              <td> Round </td>
+              <td> Unité </td>
+          </tr>
+      </thead>
+      <tbody>
+          <tr >
+            <td  class="playercol"> 1 </td>
+            {% for general in 1BestThrow %}
+              <td>{{general}}</td>
+            {% endfor %}
+          </tr>
+          <tr >
+            <td  class="playercol"> 2 </td>
+            {% for general in 2BestThrow %}
+              <td>{{general}}</td>
+            {% endfor %}
+          </tr>
+          <tr>
+            <td  class="playercol"> 3 </td>
+            {% for general in 3BestThrow %}
+              <td>{{general}}</td>
+            {% endfor %}
+          </tr>
+    
+      </tbody>
+  </table>  
+  </div>
+</div>
+
   
 
-  <div class = "tableau">
+  <div class = "noselect tableau">
     <table class="styled-table">
       <thead>
           <tr>  
@@ -105,7 +146,7 @@
 <div class="lucktablea">
 
 
-  <div class = "tableau">
+  <div class = "noselect tableau">
     <table class="styled-table styled-tableblue">
       <thead>
           <tr>  
@@ -119,43 +160,99 @@
           <tr class="generalline">
               <td  class="playercol"> Mean </td>
               {% for general in luckBlueGeneral %}
-                <td>{{general}} %</td>
+                {% if 1 > general  %}
+                  <td class = "nonetext"> ---     </td>
+                {% elif general > 52 %}
+                  <td class = "greentext">{{general}} %</td>
+                {% elif 48 > general  %}
+                  <td class = "redtext">{{general}} %</td>
+                {% else %}
+                  <td class = "yellowtext">{{general}} %</td>
+                {% endif%}
               {% endfor %}
           </tr>
           <tr>
             <td  class="playercol"> Round1 </td>
             {% for general in luckBlueRound1 %}
-              <td>{{general}} %</td>
+              {% if 1 > general  %}
+                <td class = "nonetext"> ---     </td>
+              {% elif general > 52 %}
+                <td class = "greentext">{{general}} %</td>
+              {% elif 48 > general  %}
+                <td class = "redtext">{{general}} %</td>
+              {% else %}
+                <td class = "yellowtext">{{general}} %</td>
+              {% endif%}
               {% endfor %}
           </tr>
           <tr>
             <td  class="playercol"> Round2 </td>
             {% for general in luckBlueRound2 %}
-              <td>{{general}} %</td>
+              {% if 1 > general  %}
+                <td class = "nonetext"> ---     </td>
+              {% elif general > 52 %}
+                <td class = "greentext">{{general}} %</td>
+              {% elif 48 > general  %}
+                <td class = "redtext">{{general}} %</td>
+              {% else %}
+                <td class = "yellowtext">{{general}} %</td>
+              {% endif%}
             {% endfor %}
           </tr>
           <tr>
             <td  class="playercol"> Round3 </td>
             {% for general in luckBlueRound3 %}
-              <td>{{general}} %</td>
-              {% endfor %}
+              {% if 1 > general  %}
+                <td class = "nonetext"> ---     </td>
+              {% elif general > 52 %}
+                <td class = "greentext">{{general}} %</td>
+              {% elif 48 > general  %}
+                <td class = "redtext">{{general}} %</td>
+              {% else %}
+                <td class = "yellowtext">{{general}} %</td>
+              {% endif%}
+            {% endfor %}
           </tr>
           <tr>
             <td  class="playercol"> Round4 </td>
             {% for general in luckBlueRound4 %}
-              <td>{{general}} %</td>
+              {% if 1 > general  %}
+                <td class = "nonetext"> ---     </td>
+              {% elif general > 52 %}
+                <td class = "greentext">{{general}} %</td>
+              {% elif 48 > general  %}
+                <td class = "redtext">{{general}} %</td>
+              {% else %}
+                <td class = "yellowtext">{{general}} %</td>
+              {% endif%}
             {% endfor %}
           </tr>
           <tr>
             <td  class="playercol"> Round5 </td>
             {% for general in luckBlueRound5 %}
-              <td>{{general}} %</td>
-              {% endfor %}
+              {% if 1 > general  %}
+                <td class = "nonetext"> ---     </td>
+              {% elif general > 52 %}
+                <td class = "greentext">{{general}} %</td>
+              {% elif 48 > general  %}
+                <td class = "redtext">{{general}} %</td>
+              {% else %}
+                <td class = "yellowtext">{{general}} %</td>
+              {% endif%}
+            {% endfor %}
           </tr>
           <tr>
             <td  class="playercol"> Round6 </td>
             {% for general in luckBlueRound6 %}
-              <td>{{general}} %</td>
+              {% if 1 > general  %}
+                <td class = "nonetext"> ---     </td>
+              {% elif general > 52  %}
+                <td class = "greentext">{{general}} %</td>
+              {% elif 48 > general  %}
+                <td class = "redtext">{{general}} %</td>
+              {% else %}
+                <td class = "yellowtext">{{general}} %</td>
+              {% endif%}
             {% endfor %}
           </tr>
       </tbody>
@@ -163,7 +260,7 @@
   </div>
   
   
-  <div class = "tableau">
+  <div class = "noselect tableau">
     <table class="styled-table styled-tablered">
       <thead>
           <tr>   
@@ -177,43 +274,99 @@
           <tr class="generalline">
               <td  class="playercol"> Mean </td>
               {% for general in luckRedGeneral %}
-                <td>{{general}} %</td>
+                {% if 1 > general  %}
+                  <td class = "nonetext"> ---     </td>
+                {% elif general > 52 %}
+                  <td class = "greentext">{{general}} %</td>
+                {% elif 48 > general  %}
+                  <td class = "redtext">{{general}} %</td>
+                {% else %}
+                  <td class = "yellowtext">{{general}} %</td>
+                {% endif%}
               {% endfor %}
           </tr>
           <tr>
             <td  class="playercol"> Round1 </td>
             {% for general in luckRedRound1 %}
-              <td>{{general}} %</td>
+              {% if 1 > general  %}
+                <td class = "nonetext"> ---     </td>
+              {% elif general > 52 %}
+                <td class = "greentext">{{general}} %</td>
+              {% elif 48 > general  %}
+                <td class = "redtext">{{general}} %</td>
+              {% else %}
+                <td class = "yellowtext">{{general}} %</td>
+              {% endif%}
               {% endfor %}
           </tr>
           <tr>
             <td  class="playercol"> Round2 </td>
             {% for general in luckRedRound2 %}
-              <td>{{general}} %</td>
+              {% if 1 > general  %}
+                <td class = "nonetext"> ---     </td>
+              {% elif general > 52 %}
+                <td class = "greentext">{{general}} %</td>
+              {% elif 48 > general  %}
+                <td class = "redtext">{{general}} %</td>
+              {% else %}
+                <td class = "yellowtext">{{general}} %</td>
+              {% endif%}
             {% endfor %}
           </tr>
           <tr>
             <td  class="playercol"> Round3 </td>
             {% for general in luckRedRound3 %}
-              <td>{{general}} %</td>
-              {% endfor %}
+              {% if 1 > general  %}
+                <td class = "nonetext"> ---     </td>
+              {% elif general > 52 %}
+                <td class = "greentext">{{general}} %</td>
+              {% elif 48 > general  %}
+                <td class = "redtext">{{general}} %</td>
+              {% else %}
+                <td class = "yellowtext">{{general}} %</td>
+              {% endif%}
+            {% endfor %}
           </tr>
           <tr>
             <td  class="playercol"> Round4 </td>
             {% for general in luckRedRound4 %}
-              <td>{{general}} %</td>
+              {% if 1 > general  %}
+                <td class = "nonetext"> ---     </td>
+              {% elif general > 52 %}
+                <td class = "greentext">{{general}} %</td>
+              {% elif 48 > general  %}
+                <td class = "redtext">{{general}} %</td>
+              {% else %}
+                <td class = "yellowtext">{{general}} %</td>
+              {% endif%}
             {% endfor %}
           </tr>
           <tr>
             <td  class="playercol"> Round5 </td>
             {% for general in luckRedRound5 %}
-              <td>{{general}} %</td>
+              {% if 1 > general  %}
+                <td class = "nonetext"> ---     </td>
+              {% elif general > 52 %}
+                <td class = "greentext">{{general}} %</td>
+              {% elif 48 > general  %}
+                <td class = "redtext">{{general}} %</td>
+              {% else %}
+                <td class = "yellowtext">{{general}} %</td>
+              {% endif%}
               {% endfor %}
           </tr>
           <tr>
             <td  class="playercol"> Round6 </td>
             {% for general in luckRedRound6 %}
-              <td>{{general}} %</td>
+              {% if 1 > general  %}
+                <td class = "nonetext"> ---     </td>
+              {% elif general > 52 %}
+                <td class = "greentext">{{general}} %</td>
+              {% elif 48 > general  %}
+                <td class = "redtext">{{general}} %</td>
+              {% else %}
+                <td class = "yellowtext">{{general}} %</td>
+              {% endif%}
             {% endfor %}
           </tr>
       </tbody>
@@ -221,58 +374,23 @@
   </div>
 </div>
 
-
-
-<div class="wrapper">
-  <div class="clip-text clip-text_one">Round 1</div>
-</div>
     
+
 <!-- BEST THROW
 
-<div class = "tableau">
-  <table class="styled-table styled-tablegreen">
-    
-    <thead>
-        <tr >  
-            <th> Meilleurs jets </th>
-            <td>Joueur</td>
-            <td> Att / Def </td>
-            <td> Round </td>
-            <td> Unité </td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr >
-          <td  class="playercol"> 1 </td>
-          {% for general in 1BestThrow %}
-            <td>{{general}}</td>
-          {% endfor %}
-        </tr>
-        <tr >
-          <td  class="playercol"> 2 </td>
-          {% for general in 2BestThrow %}
-            <td>{{general}}</td>
-          {% endfor %}
-        </tr>
-        <tr>
-          <td  class="playercol"> 3 </td>
-          {% for general in 3BestThrow %}
-            <td>{{general}}</td>
-          {% endfor %}
-        </tr>
-   
-    </tbody>
-</table>  
+
+<div class="spacetableau noselect"> 
+  <div class="wrapper noselect">
+    <div class="clip-text clip-text_one noselect">Round 1</div>
+  </div>
 </div>
 -->
 
+<br>
+<br>
+
 <script>
 
-var colorMatch = {
-    '0-19'     : 'red',
-    '20-59'    : 'orange',
-    '60-100'   : 'green'
- };
 
 
 </script>

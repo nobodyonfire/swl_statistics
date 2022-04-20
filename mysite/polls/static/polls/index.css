@@ -2,7 +2,7 @@
 
 body{
 	font-family: 'josefin sans';
-	font-size: 16px;
+	font-size: 20px;
 
     background-image: url("../images/backgroundindex.jpeg");
     background-repeat: no-repeat;
@@ -17,6 +17,10 @@ body{
     color : rgb(255, 255, 255);
 
 }
+
+.spacetableau{
+    margin-top: 50px;
+}
 .lucktablea{
     margin-top: 20px;
     margin-left: 16px;
@@ -27,8 +31,7 @@ body{
 
 .styled-table {
     border-collapse: collapse;
-    margin-left: 16%;
-    margin-right: 16%;
+
     margin-top :40px;
     text-align: center;
     font-size: 0.9em;
@@ -142,3 +145,13 @@ transform: translateY(-4rem);
     text-align: center;
     margin-top: 50px;
 }
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }

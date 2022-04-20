@@ -6,8 +6,37 @@ body{
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+.greentext{
+  color: rgb(119, 255, 119);
+  font-weight: bolder;
+  font-size: 17px;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: rgb(0, 120, 0);
 
+}
 
-td[data-result-val="L"] { color: red;}
-td[data-result-val="W"] { color: green;}
-td[data-result-val="D"] { color: grey;}
+.yellowtext{
+  color:#fffcc9;
+  font-weight: bolder;
+  font-size: 17px;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: #c5bb00;
+}
+
+.redtext{
+  color:rgb(255, 81, 81);
+  font-weight: bolder;
+  font-size: 17px;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: rgb(147, 0, 0);
+}
+
+.nonetext{
+
+  color:rgb(255, 255, 255);
+  font-weight: bolder;
+  font-size: 17px;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+
+}
