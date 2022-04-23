@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 from matplotlib.pyplot import figure
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-from termcolor import colored
 
 import os 
 
