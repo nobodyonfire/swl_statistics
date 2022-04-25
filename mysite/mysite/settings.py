@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['swl-stats.herokuapp.com','127.0.0.1','https://swlstats.herokuapp.com/']
 
+CSRF_TRUSTED_ORIGINS = ['swl-stats.herokuapp.com']
 
 # Application definition
 
