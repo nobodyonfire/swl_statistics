@@ -8,7 +8,7 @@ urlpatterns = [
     path('stats', views.statsRequest, name='stats'),
     path('infos', views.infosRequest, name='infos'),
 
-    path('outputatt', views.outputattRequest, name='outputatt'),
-    path('outputdef', views.outputdefRequest, name='outputdef'),
+    path('outputatt', views.statsRequest, name='outputatt'),
+
 
 ]

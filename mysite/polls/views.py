@@ -13,7 +13,6 @@ from django.forms import ModelForm
 from .forms import SurveyForm
 
 from .pythonalgorithms.globalcomputing import *
-from .pythonalgorithms.diceFunctions import *
 
 
 
@@ -29,6 +28,7 @@ def globalRequest(request):
         dictGlobal = { 
         }
 
+
         return render(request, 'polls/index.html',dictGlobal)  
 
     if request.method == 'POST':
@@ -42,15 +42,17 @@ def statsRequest(request):
 
     if request.method == 'GET':
 
-        returnDict = main()
-
-        return render(request, 'polls/index.html',returnDict)  
-
-    if request.method == 'POST':
-  
         dictGlobal= {
         }
-        return render(request, 'polls/stats.html',dictGlobal)  
+        
+        return render(request, 'polls/index.html',dictGlobal)  
+
+    if request.method == 'POST':
+        
+        returnDict = main()
+  
+        return render(request, 'polls/stats.html',returnDict)  
+
 
 
 def infosRequest(request):
@@ -60,106 +62,10 @@ def infosRequest(request):
         }
         return render(request, 'polls/infos.html',dictGlobal)  
 
-        
-
-def trad(x):
-    if x:
-        x=int(x)
-    else:
-        x=0
-    return x
-
-def tradCheckBox(x):
-    if x:
-        x=True
-    else :
-        x=False
-    return x
-
-def outputattRequest(request):
-
-    if request.method == 'GET':
-
-        
-        dictGlobal = { 
-            'output':False
+    if request.method == 'POST':
+  
+        dictGlobal= {
         }
-
         return render(request, 'polls/infos.html',dictGlobal)  
 
-    if request.method == 'POST':
-
-
-        numberAttRedDice = request.POST.get('ratt', 0)
-        numberAttBlackDice = request.POST.get('natt', 0)
-        numberAttWhiteDice = request.POST.get('watt', 0)
-
-        AdreConvertCrit = request.POST.get('adrecrit', 0)
-        AdreConvert = request.POST.get('adretouche', 0)
-
-        critiqueNumber = request.POST.get('critical', 0)
-
-
-        numberAttRedDice=trad(numberAttRedDice)
-        numberAttBlackDice=trad(numberAttBlackDice)
-        numberAttWhiteDice=trad(numberAttWhiteDice)
-        AdreConvertCrit=tradCheckBox(AdreConvertCrit)
-        AdreConvert=tradCheckBox(AdreConvert)
-        critiqueNumber=trad(critiqueNumber)
-
-        resultedEsperance,crits,hits,miss = throwDice(numberAttWhiteDice,numberAttBlackDice,numberAttRedDice,AdreCrit=AdreConvertCrit,Adre=AdreConvert,critiqueNumber = critiqueNumber)  
-
-        print("Resulted Esperance : ", resultedEsperance)
-        dict= {
-            'output':True,
-            'outputatt':True,
-            'outputdef':False,
-            'resultedEsperance':resultedEsperance,
-            'crits':crits,
-            'hits':hits,
-            'miss':miss,
         
-            }
-        
-        return render(request, 'polls/infos.html',dict)  
-
- 
-def outputdefRequest(request):
-
-    if request.method == 'GET':
-
-        
-        dictGlobal = { 
-            'output':False
-        }
-
-        return render(request, 'polls/infos.html',dictGlobal)  
-
-    if request.method == 'POST':
-
-
-        numberDefRedDice = request.POST.get('rdef', 0)
-        numberDefWhiteDice = request.POST.get('wdef', 0)
-
-        AdreConvert = request.POST.get('adredef', 0)
-
-        numberDefRedDice=trad(numberDefRedDice)
-        numberDefWhiteDice=trad(numberDefWhiteDice)
-        AdreConvert=tradCheckBox(AdreConvert)
-
-        resultedEsperance,defs,miss = throwDiceDEF(numberDefWhiteDice,numberDefRedDice, Adre=AdreConvert)
-
-        print("Resulted Esperance : ", resultedEsperance)
-        dict= {
-            'output':True,
-            'outputatt':False,
-            'outputdef':True,
-            'resultedEsperance':resultedEsperance,
-            'defs':defs,
-            'miss':miss,
-        
-            }
-        
-        return render(request, 'polls/infos.html',dict)  
-
- 
