@@ -29,7 +29,6 @@ def globalRequest(request):
         dictGlobal = { 
         }
 
-
         return render(request, 'polls/index.html',dictGlobal)  
 
     if request.method == 'POST':
@@ -51,7 +50,7 @@ def statsRequest(request):
   
         dictGlobal= {
         }
-        return render(request, 'polls/index.html',dictGlobal)  
+        return render(request, 'polls/stats.html',dictGlobal)  
 
 
 def infosRequest(request):

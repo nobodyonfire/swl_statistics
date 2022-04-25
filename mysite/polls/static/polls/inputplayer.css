@@ -5,9 +5,23 @@ RESET STYLES
 =====
 */
 
+
+
+.container{  padding-top: 20px;
+  padding-bottom: 20px;}
+  
+  
+  body{
+  background-image:url(http://cassiopee1.e-monsite.com/medias/album/n-51.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  }
+  
+
 .field__input{ 
     --uiFieldPlaceholderColor: var(--fieldPlaceholderColor, #767676);
-    
+
     background-color: transparent;
     border-radius: 0;
     border: none;
@@ -41,7 +55,7 @@ RESET STYLES
   
     display: var(--fieldDisplay, inline-flex);
     position: relative;
-    font-size: var(--fieldFontSize, 1rem);
+    font-size: 25px;
   }
   
   .field__input{
@@ -164,6 +178,7 @@ RESET STYLES
   .field{
     --fieldBorderColor: #D1C4E9;
     --fieldBorderColorActive: #b73a3a;
+
   }
   
   /*
