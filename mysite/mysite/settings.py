@@ -30,6 +30,7 @@ ALLOWED_HOSTS = ['swl-stats.herokuapp.com','127.0.0.1','https://swlstats.herokua
 
 CSRF_TRUSTED_ORIGINS = ['swl-stats.herokuapp.com']
 
+
 # Application definition
 
 INSTALLED_APPS = [
